@@ -1,12 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
+import WalletForm from '../components/WalletForm';
+import { fetchCurrencyAPI } from '../redux/actions/requestAPI';
 
 class Wallet extends React.Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(fetchCurrencyAPI());
+  }
+
   render() {
     return (
-      <Header />
+      <section>
+        <Header />
+        <WalletForm />
+      </section>
     );
   }
 }
 
-export default Wallet;
+Wallet.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+export default connect()(Wallet);

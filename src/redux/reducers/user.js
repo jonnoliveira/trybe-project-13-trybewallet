@@ -3,9 +3,7 @@
 import { EMAIL_LOGED } from '../actions';
 
 const INITIAL_STATE = {
-  user: {
-    email: '', // string que armazena o email da pessoa usuária
-  },
+  email: '', // string que armazena o email da pessoa usuária
 };
 
 const user = (state = INITIAL_STATE, action) => {
@@ -13,7 +11,7 @@ const user = (state = INITIAL_STATE, action) => {
   case EMAIL_LOGED:
     return {
       ...state,
-      email: action.payload.email,
+      email: action.payload,
     };
   default:
     return state;
