@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import WalletForm from '../components/WalletForm';
 import { fetchCurrencyAPI } from '../redux/actions/requestAPI';
+import Table from '../components/Table';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class Wallet extends React.Component {
       <section>
         <Header />
         <WalletForm />
+        <Table />
       </section>
     );
   }
