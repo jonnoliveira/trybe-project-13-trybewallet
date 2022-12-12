@@ -24,7 +24,7 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       isFatching: false,
-      currencies: action.payload,
+      currencies: Object.keys(action.payload),
     };
   case REQUEST_FAILED:
     return {
