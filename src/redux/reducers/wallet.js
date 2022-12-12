@@ -1,7 +1,7 @@
 // REDUCER WALLET
 
 import {
-  REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED,
+  REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED, EXPENSES,
 } from '../actions/requestAPI';
 
 const INITIAL_STATE = {
@@ -30,6 +30,11 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       errorMessage: action.payload,
+    };
+  case EXPENSES:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.payload],
     };
   default:
     return state;

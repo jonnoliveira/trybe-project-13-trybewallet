@@ -1,5 +1,7 @@
 // ACTIONS
 
+// import { requestStarted, requestFailed, CURRENCIES_API } from './requestAPI';
+
 // ACTIONS TYPE
 export const EMAIL_LOGED = 'EMAIL_LOGED';
 

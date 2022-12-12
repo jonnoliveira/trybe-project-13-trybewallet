@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 class Header extends Component {
   render() {
-    const { email } = this.props;
+    const { email, expenses } = this.props;
+
+    // CALCULAR O VALOR FINAL SOMANDO 'VALUE' DE CADA DESPESA:
+    const price = expenses.reduce((sum, expense) => (
+      sum + expense.value * expense.exchangeRates[expense.currency].ask), 0).toFixed(2);
+
     return (
       <header>
         <figure>
@@ -19,7 +24,7 @@ class Header extends Component {
           </div>
           <div>
             <p data-testid="total-field">
-              Despesas Totais: 0
+              { price }
             </p>
           </div>
           <div>
@@ -36,10 +41,14 @@ class Header extends Component {
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
+  expenses: state.wallet.expenses,
 });
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+  })).isRequired,
 };
 
 export default connect(mapStateToProps)(Header);
