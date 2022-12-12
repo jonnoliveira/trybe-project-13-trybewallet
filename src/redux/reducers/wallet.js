@@ -4,6 +4,8 @@ import {
   REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED, EXPENSES,
 } from '../actions/requestAPI';
 
+import { REMOVE_EXPENSE } from '../actions/index';
+
 const INITIAL_STATE = {
   isFatching: false,
   errorMessage: '',
@@ -35,6 +37,11 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: [...state.expenses, action.payload],
+    };
+  case REMOVE_EXPENSE:
+    return {
+      ...state,
+      expenses: action.payload,
     };
   default:
     return state;

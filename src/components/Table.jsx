@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import DeleteButton from './DeleteButton';
+import EditButton from './EditButton';
 
 const REAL = 'Real';
 
 class Table extends React.Component {
   render() {
     const { expenses } = this.props;
-    console.log(expenses);
     return (
       <section>
         <table>
@@ -33,19 +34,20 @@ class Table extends React.Component {
                 value,
                 exchangeRates,
                 currency,
-              }, index) => (
-                <tr key={ index }>
+                id,
+              }) => (/* Por que com index não passsa no requisito? */
+                <tr key={ id }>
                   <td>{description}</td>
                   <td>{tag}</td>
                   <td>{method}</td>
-                  <td>{(value * 1).toFixed(2)}</td>
+                  <td>{Number(value).toFixed(2)}</td>
                   <td>{exchangeRates[currency].name}</td>
-                  <td>{(exchangeRates[currency].ask * 1).toFixed(2)}</td>
+                  <td>{Number(exchangeRates[currency].ask).toFixed(2)}</td>
                   <td>{(value * exchangeRates[currency].ask).toFixed(2)}</td>
                   <td>{REAL}</td>
                   <td>
-                    <button type="button">Editar</button>
-                    <button type="button">Excluir</button>
+                    <EditButton id={ id } expenses={ expenses } />
+                    <DeleteButton id={ id } expenses={ expenses } />
                   </td>
                 </tr>
               ))
