@@ -136,7 +136,7 @@ describe('Test the "Table" component', () => {
     expect(buttonDelete).toBeDefined();
   });
 
-  it('checks if the "Excluir" button delete expenses in the table', async () => {
+  it('checks if the "Excluir" and "Editar" buttons delete and edit, respectively, expenses in the table', async () => {
     jest.spyOn(global, 'fetch');
     global.fetch.mockResolvedValue({
       json: jest.fn().mockResolvedValue(mockData),
@@ -150,7 +150,6 @@ describe('Test the "Table" component', () => {
     const inputTag = screen.getByRole('combobox', { name: /tag:/i });
     const inputDescription = screen.getByRole('textbox', { name: /descrição:/i });
     const buttonAdd = await screen.findByRole('button', { name: /adicionar despesa/i });
-
     const selectedMethod = screen.getByRole('option', { name: 'Cartão de crédito' });
     const selectedTag = screen.getByRole('option', { name: 'Saúde' });
 
@@ -171,8 +170,6 @@ describe('Test the "Table" component', () => {
       userEvent.click(buttonAdd);
     });
 
-    // expect(inputValue).toHaveValue(''); // << não passa T.T
-
     const descriptionTableValue = await screen.findByText(/again!/i);
     const tagTableValue = await screen.findByRole('cell', { name: /saúde/i });
     const methodTableValue = await screen.findByRole('cell', { name: /cartão de crédito/i });
@@ -181,7 +178,6 @@ describe('Test the "Table" component', () => {
     const exchangeTableValue = await screen.findByRole('cell', { name: /4\.75/i });
     const convertedTableValue = await screen.findByRole('cell', { name: /475\.31/i });
     const conversionTableValue = await screen.findByRole('cell', { name: 'Real' });
-    const buttonEdit = await screen.findByRole('button', { name: /editar/i });
     const buttonDelete = await screen.findByRole('button', { name: /excluir/i });
 
     expect(descriptionTableValue).toBeDefined();
@@ -192,13 +188,48 @@ describe('Test the "Table" component', () => {
     expect(exchangeTableValue).toBeDefined();
     expect(convertedTableValue).toBeDefined();
     expect(conversionTableValue).toBeDefined();
-    expect(buttonEdit).toBeDefined();
     expect(buttonDelete).toBeDefined();
 
     act(() => {
       userEvent.click(buttonDelete);
     });
 
-    expect(buttonDelete).not.toBeInTheDocument(); // >> toBeDefined não funciona
+    expect(buttonDelete).not.toBeInTheDocument();
+
+    act(() => {
+      userEvent.type(inputValue, '100');
+      userEvent.selectOptions(inputMethod, selectedMethod);
+      userEvent.selectOptions(inputTag, selectedTag);
+      userEvent.type(inputDescription, 'Again and again!');
+    });
+
+    act(() => {
+      userEvent.click(buttonAdd);
+    });
+
+    const buttonEdit = await screen.findByRole('button', { name: /editar/i });
+
+    expect(buttonEdit).toBeDefined();
+
+    act(() => {
+      userEvent.click(buttonEdit);
+    });
+
+    act(() => {
+      userEvent.type(inputValue, '350');
+      userEvent.type(inputDescription, 'Xablau');
+    });
+
+    const buttonSave = await screen.findByRole('button', { name: /editar despesa/i });
+
+    act(() => {
+      userEvent.click(buttonSave);
+    });
+
+    const descriptionTableValueEdited = screen.findByRole('cell', { name: /xablau/i });
+    const valueTableValueEdited = screen.findByRole('cell', { name: /350\.00/i });
+
+    expect(await descriptionTableValueEdited).toBeDefined();
+    expect(await valueTableValueEdited).toBeDefined();
   });
 });

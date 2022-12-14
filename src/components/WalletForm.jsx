@@ -19,9 +19,7 @@ class WalletForm extends Component {
 
   onChangeHandler = ({ target }) => {
     const { name } = target;
-    const value = target.type === 'checkbox'
-      ? target.checked
-      : target.value;
+    const { value } = target;
 
     this.setState({
       [name]: value,
