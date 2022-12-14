@@ -58,8 +58,11 @@ class Login extends React.Component {
     return (
       <section>
         <div>
-          <img src="https://cdn.pixabay.com/photo/2018/10/03/11/31/wallet-3721156_1280.png" alt="Uma carteira em desnho com dinheiro saindo" width="100px" />
-          <label htmlFor="inputEmail">
+          <img src="https://cdn.pixabay.com/photo/2018/10/03/11/31/wallet-3721156_1280.png" alt="Login" width="100px" />
+          <h1>Faça seu login:</h1>
+          <label htmlFor="email">
+            Email:
+            {' '}
             <input
               type="email"
               name="email"
@@ -69,7 +72,10 @@ class Login extends React.Component {
               data-testid="email-input"
             />
           </label>
-          <label htmlFor="inputEmail">
+
+          <label htmlFor="password">
+            Senha:
+            {' '}
             <input
               type="password"
               name="password"

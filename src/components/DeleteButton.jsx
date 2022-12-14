@@ -27,19 +27,12 @@ class DeleteButton extends Component {
   }
 }
 
+DeleteButton.defaultProps = {
+  expenses: [],
+};
 DeleteButton.propTypes = {
+  expenses: PropTypes.instanceOf(Array),
   id: PropTypes.number.isRequired,
-  expenses: PropTypes.arrayOf(PropTypes.objectOf({
-    currency: PropTypes.string,
-    description: PropTypes.string,
-    method: PropTypes.string,
-    tag: PropTypes.string,
-    value: PropTypes.string,
-    exchangeRates: PropTypes.shape({
-      name: PropTypes.string,
-      ask: PropTypes.number,
-    }),
-  })).isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 

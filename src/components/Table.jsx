@@ -63,18 +63,11 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
 });
 
+Table.defaultProps = {
+  expenses: [],
+};
 Table.propTypes = {
-  expenses: PropTypes.arrayOf(PropTypes.objectOf({
-    currency: PropTypes.string,
-    description: PropTypes.string,
-    method: PropTypes.string,
-    tag: PropTypes.string,
-    value: PropTypes.string,
-    exchangeRates: PropTypes.shape({
-      name: PropTypes.string,
-      ask: PropTypes.number,
-    }),
-  })).isRequired,
+  expenses: PropTypes.instanceOf(Array),
 };
 
 export default connect(mapStateToProps)(Table);

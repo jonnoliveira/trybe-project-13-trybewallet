@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class EditButton extends Component {
+class EditButton extends Component {
   render() {
     return (
-      <button type="button">Editar</button>
+      <button
+        type="button"
+        data-testid="edit-btn"
+      >
+        Editar
+
+      </button>
     );
   }
 }
+
+export default connect()(EditButton);

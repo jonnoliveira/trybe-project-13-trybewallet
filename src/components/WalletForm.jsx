@@ -60,6 +60,7 @@ class WalletForm extends Component {
   render() {
     const { currencies } = this.props;
     const { value, currency, method, tag, description } = this.state;
+
     return (
       <section>
         <label htmlFor="value">
@@ -88,8 +89,8 @@ class WalletForm extends Component {
             value={ currency }
           >
             {
-              currencies.map((coin, index) => (
-                <option key={ index }>{coin}</option>
+              currencies.map((coin) => (
+                <option key={ coin }>{coin}</option>
               ))
             }
           </select>
@@ -106,8 +107,8 @@ class WalletForm extends Component {
             value={ method }
           >
             {
-              METHODS.map((methods, index) => (
-                <option key={ index } value={ methods }>{methods}</option>
+              METHODS.map((methods) => (
+                <option key={ methods } value={ methods }>{methods}</option>
               ))
 
             }
@@ -126,8 +127,8 @@ class WalletForm extends Component {
 
           >
             {
-              TAGS.map((tg, index) => (
-                <option key={ index } value={ tg }>{tg}</option>
+              TAGS.map((tg) => (
+                <option key={ tg } value={ tg }>{tg}</option>
               ))
             }
           </select>
@@ -147,7 +148,9 @@ class WalletForm extends Component {
 
           />
         </label>
-        <button type="button" onClick={ this.toGlobalState }>Adicionar despesa</button>
+        <button type="button" onClick={ this.toGlobalState }>
+          Adicionar despesa
+        </button>
       </section>
     );
   }
