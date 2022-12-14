@@ -4,7 +4,7 @@ import {
   REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED, EXPENSES,
 } from '../actions/requestAPI';
 
-import { REMOVE_EXPENSE } from '../actions/index';
+import { REMOVE_EXPENSE, EDIT_EXPENSE, SAVE_EDIT_EXPENSE } from '../actions/index';
 
 const INITIAL_STATE = {
   isFatching: false,
@@ -42,6 +42,21 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: action.payload,
+    };
+  case EDIT_EXPENSE:
+    return {
+      ...state,
+      editor: true,
+      idToEdit: action.payload,
+    };
+  case SAVE_EDIT_EXPENSE:
+    return {
+      ...state,
+      expenses: state.expenses
+        .map((expense) => (expense.id === Number(state.idToEdit)
+          ? ({ id: expense.id, ...action.payload, exchangeRates: expense.exchangeRates })
+          : expense)),
+      editor: false,
     };
   default:
     return state;

@@ -30,6 +30,7 @@ class DeleteButton extends Component {
 DeleteButton.defaultProps = {
   expenses: [],
 };
+
 DeleteButton.propTypes = {
   expenses: PropTypes.instanceOf(Array),
   id: PropTypes.number.isRequired,

@@ -35,7 +35,7 @@ class Table extends React.Component {
                 exchangeRates,
                 currency,
                 id,
-              }) => (/* Por que com index não passsa no requisito? */
+              }) => (
                 <tr key={ id }>
                   <td>{description}</td>
                   <td>{tag}</td>
