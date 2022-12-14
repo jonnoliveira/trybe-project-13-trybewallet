@@ -52,10 +52,7 @@ const wallet = (state = INITIAL_STATE, action) => {
   case SAVE_EDIT_EXPENSE:
     return {
       ...state,
-      expenses: state.expenses
-        .map((expense) => (expense.id === Number(state.idToEdit)
-          ? ({ id: expense.id, ...action.payload, exchangeRates: expense.exchangeRates })
-          : expense)),
+      expenses: action.payload,
       editor: false,
     };
   default:
@@ -64,3 +61,12 @@ const wallet = (state = INITIAL_STATE, action) => {
 };
 
 export default wallet;
+// case SAVE_EDIT_EXPENSE:
+//   return {
+//     ...state,
+//     expenses: state.expenses
+//       .map((expense) => (expense.id === Number(state.idToEdit)
+//         ? ({ id: expense.id, ...action.payload, exchangeRates: expense.exchangeRates })
+//         : expense)),
+//     editor: false,
+//   };

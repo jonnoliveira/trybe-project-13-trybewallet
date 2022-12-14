@@ -55,9 +55,13 @@ class WalletForm extends Component {
   };
 
   handleEditExpense = () => {
-    const { dispatch } = this.props;
+    const { dispatch, expenses, idToEdit } = this.props;
 
-    dispatch(saveEditedExpense(this.state));
+    const editedExpense = expenses.map((expense) => ((expense.id === idToEdit)
+      ? ({ id: expense.id, ...this.state, exchangeRates: expense.exchangeRates })
+      : expense));
+
+    dispatch(saveEditedExpense(editedExpense));
 
     this.setState({
       value: '',
@@ -173,6 +177,7 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
   currencies: state.wallet.currencies,
   editor: state.wallet.editor,
+  idToEdit: state.wallet.idToEdit,
 });
 
 WalletForm.defaultProps = {
@@ -184,6 +189,7 @@ WalletForm.propTypes = {
   dispatch: PropTypes.func.isRequired,
   editor: PropTypes.bool.isRequired,
   expenses: PropTypes.instanceOf(Array),
+  idToEdit: PropTypes.number.isRequired,
 
 };
 
