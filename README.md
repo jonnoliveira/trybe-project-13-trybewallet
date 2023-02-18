@@ -62,7 +62,7 @@ Em suma, utilizei React e Redux para realizar toda lógica de programação do p
 
 ## 100% :heavy_check_mark:
 
-![Project-Wallet-Grade]()
+![Project-Wallet-Grade](https://github.com/jonnoliveira/trybe-project-13-trybewallet/blob/main/images/trybe-wallet-grade.png)
 
 </details> 
  
