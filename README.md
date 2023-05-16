@@ -2,7 +2,7 @@
 
 ## Esse projeto pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/) :green_heart:
 
-## :construction: CSS em aprimoramento :construction:
+## Acesse o projeto clicando [aqui](https://jonnoliveira.github.io/trybe-project-13-tribewallet)! :computer:
  
 <details>
  
@@ -76,7 +76,9 @@ Em suma, utilizei React e Redux para realizar toda lógica de programação do p
 
 </summary>
 
-![Project-Wallet-Grade]()
+![Project-Wallet-Preview-1](https://github.com/jonnoliveira/trybe-project-13-trybewallet/blob/main/images/project-wallet-preview-1.png)
+ ![Project-Wallet-Preview-2](https://github.com/jonnoliveira/trybe-project-13-trybewallet/blob/main/images/project-wallet-preview-2.png)
+ ![Project-Wallet-Preview-3](https://github.com/jonnoliveira/trybe-project-13-trybewallet/blob/main/images/project-wallet-preview-3.png)
 
 </details>
 
