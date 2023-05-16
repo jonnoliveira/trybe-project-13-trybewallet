@@ -2,7 +2,7 @@
 
 ## Esse projeto pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/) :green_heart:
 
-## Acesse o projeto clicando [aqui](https://jonnoliveira.github.io/trybe-project-13-tribewallet)! :computer:
+## Acesse o projeto clicando [aqui](https://jonnoliveira.github.io/trybe-project-13-trybewallet)! :computer:
  
 <details>
  
