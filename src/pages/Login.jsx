@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { emailLoged } from '../redux/actions';
 
+import '../css/Login.css';
+
 class Login extends React.Component {
   state = {
     isDisabled: true,
@@ -54,43 +56,50 @@ class Login extends React.Component {
   render() {
     const { isDisabled } = this.state;
     return (
-      <section>
-        <div>
-          <img src="https://cdn.pixabay.com/photo/2018/10/03/11/31/wallet-3721156_1280.png" alt="Login" width="100px" />
-          <h1>Faça seu login:</h1>
-          <label htmlFor="email">
-            Email:
-            {' '}
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="joao@teste.com"
-              onChange={ this.onChangeHandler }
-              data-testid="email-input"
-            />
-          </label>
+      <section className="login-container">
+        <div className="login-container-img">
+          <img className="login-img" src="https://images.ui8.net/uploads/screen2_1620498758245.jpg" alt="" />
+        </div>
+        <div className="login-inputs-container">
+          <div className=" login-inputs-container-infos">
+            <div className="login-inputs-container-title">
+              <p>Trybe</p>
+              <h1>wallet</h1>
+            </div>
+            <label htmlFor="email">
+              Email:
+              {' '}
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="joao@teste.com"
+                onChange={ this.onChangeHandler }
+                data-testid="email-input"
+              />
+            </label>
 
-          <label htmlFor="password">
-            Senha:
-            {' '}
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Digite sua melhor senha"
-              onChange={ this.onChangeHandler }
-              data-testid="password-input"
-            />
-          </label>
-          <button
-            type="button"
-            disabled={ isDisabled }
-            onClick={ this.toGlobalState }
-          >
-            Entrar
+            <label htmlFor="password">
+              Senha:
+              {' '}
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Digite sua melhor senha"
+                onChange={ this.onChangeHandler }
+                data-testid="password-input"
+              />
+            </label>
+            <button
+              type="button"
+              disabled={ isDisabled }
+              onClick={ this.toGlobalState }
+            >
+              Entrar
 
-          </button>
+            </button>
+          </div>
         </div>
       </section>
     );
