@@ -1,4 +1,4 @@
-# PROJETO 13 - TRYBE WALLET :computer:
+# PROJETO 13 - TRYBEWALLET :computer:
 
 ## Esse projeto pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/) :green_heart:
 
