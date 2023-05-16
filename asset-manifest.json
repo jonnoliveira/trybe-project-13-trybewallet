@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/trybe-project-13-trybewallet/static/css/main.54985c4e.css",
-    "main.js": "/trybe-project-13-trybewallet/static/js/main.1edee96e.js",
+    "main.css": "/trybe-project-13-trybewallet/static/css/main.41d168a5.css",
+    "main.js": "/trybe-project-13-trybewallet/static/js/main.ccca51b7.js",
     "static/media/money.svg": "/trybe-project-13-trybewallet/static/media/money.4c223616678d04da342e7834aaecd892.svg",
     "static/media/account.svg": "/trybe-project-13-trybewallet/static/media/account.bb98f40d561ec76c1556118a8acb7142.svg",
     "index.html": "/trybe-project-13-trybewallet/index.html",
     "static/media/trash.svg": "/trybe-project-13-trybewallet/static/media/trash.33b6dfbeab97ab2f9142a729e05455b6.svg",
     "static/media/edit.svg": "/trybe-project-13-trybewallet/static/media/edit.731d6f8ae8201ee5e3907e2950c2df3a.svg",
-    "main.54985c4e.css.map": "/trybe-project-13-trybewallet/static/css/main.54985c4e.css.map",
-    "main.1edee96e.js.map": "/trybe-project-13-trybewallet/static/js/main.1edee96e.js.map"
+    "main.41d168a5.css.map": "/trybe-project-13-trybewallet/static/css/main.41d168a5.css.map",
+    "main.ccca51b7.js.map": "/trybe-project-13-trybewallet/static/js/main.ccca51b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.54985c4e.css",
-    "static/js/main.1edee96e.js"
+    "static/css/main.41d168a5.css",
+    "static/js/main.ccca51b7.js"
   ]
 }
