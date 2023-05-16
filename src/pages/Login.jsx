@@ -57,9 +57,6 @@ class Login extends React.Component {
     const { isDisabled } = this.state;
     return (
       <section className="login-container">
-        <div className="login-container-img">
-          <img className="login-img" src="https://images.ui8.net/uploads/screen2_1620498758245.jpg" alt="" />
-        </div>
         <div className="login-inputs-container">
           <div className=" login-inputs-container-infos">
             <div className="login-inputs-container-title">

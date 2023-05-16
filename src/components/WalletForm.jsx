@@ -77,90 +77,93 @@ class WalletForm extends Component {
 
     return (
       <div className="walletform-container">
-        <label htmlFor="value">
-          Valor:
-          {' '}
-          <input
-            type="number"
-            name="value"
-            id="value"
-            placeholder="Digite um valor"
-            data-testid="value-input"
-            onChange={ this.onChangeHandler }
-            value={ value }
+        <div className="walletform-inputs-container">
 
-          />
-        </label>
+          <label htmlFor="value">
+            Valor:
+            {' '}
+            <input
+              type="number"
+              name="value"
+              id="value"
+              placeholder="Digite um valor"
+              data-testid="value-input"
+              onChange={ this.onChangeHandler }
+              value={ value }
 
-        <label htmlFor="currency">
-          Moeda:
-          {' '}
-          <select
-            name="currency"
-            id="currency"
-            data-testid="currency-input"
-            onChange={ this.onChangeHandler }
-            value={ currency }
-          >
-            {
-              currencies.map((coin) => (
-                <option key={ coin }>{coin}</option>
-              ))
-            }
-          </select>
-        </label>
+            />
+          </label>
 
-        <label htmlFor="method">
-          Método de pagamento:
-          {' '}
-          <select
-            name="method"
-            id="method"
-            data-testid="method-input"
-            onChange={ this.onChangeHandler }
-            value={ method }
-          >
-            {
-              METHODS.map((methods) => (
-                <option key={ methods } value={ methods }>{methods}</option>
-              ))
+          <label htmlFor="currency">
+            Moeda:
+            {' '}
+            <select
+              name="currency"
+              id="currency"
+              data-testid="currency-input"
+              onChange={ this.onChangeHandler }
+              value={ currency }
+            >
+              {
+                currencies.map((coin) => (
+                  <option key={ coin }>{coin}</option>
+                ))
+              }
+            </select>
+          </label>
 
-            }
-          </select>
-        </label>
+          <label htmlFor="method">
+            Método de pagamento:
+            {' '}
+            <select
+              name="method"
+              id="method"
+              data-testid="method-input"
+              onChange={ this.onChangeHandler }
+              value={ method }
+            >
+              {
+                METHODS.map((methods) => (
+                  <option key={ methods } value={ methods }>{methods}</option>
+                ))
 
-        <label htmlFor="tag">
-          Tag:
-          {' '}
-          <select
-            name="tag"
-            id="tag"
-            data-testid="tag-input"
-            onChange={ this.onChangeHandler }
-            value={ tag }
+              }
+            </select>
+          </label>
 
-          >
-            {
-              TAGS.map((tg) => (
-                <option key={ tg } value={ tg }>{tg}</option>
-              ))
-            }
-          </select>
-        </label>
+          <label htmlFor="tag">
+            Tag:
+            {' '}
+            <select
+              name="tag"
+              id="tag"
+              data-testid="tag-input"
+              onChange={ this.onChangeHandler }
+              value={ tag }
 
-        <label htmlFor="description">
-          Descrição:
-          {' '}
-          <input
-            type="text"
-            name="description"
-            id="description"
-            placeholder="Comente aqui"
-            data-testid="description-input"
-            onChange={ this.onChangeHandler }
-            value={ description }
-          />
-        </label>
+            >
+              {
+                TAGS.map((tg) => (
+                  <option key={ tg } value={ tg }>{tg}</option>
+                ))
+              }
+            </select>
+          </label>
+
+          <label htmlFor="description">
+            Descrição:
+            {' '}
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Comente aqui"
+              data-testid="description-input"
+              onChange={ this.onChangeHandler }
+              value={ description }
+            />
+          </label>
+        </div>
         <button
           type="button"
           onClick={ editor

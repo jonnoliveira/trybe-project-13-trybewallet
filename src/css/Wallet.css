@@ -1,31 +1,26 @@
-/* .wallet-container {
-  padding-bottom: 10vh;
-} */
-
-.wallet-container-img {
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-
-}
-
-.wallet-img {
-  filter: brightness(40%);
+.wallet-container {
+  background-image: url('https://images.ui8.net/uploads/screen2_1620498758245.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 
 .wallet-header-form-container {
-  background-color: rgba(255, 255, 255, 0.514);
+  background-color: rgba(255, 255, 255, 0.801);
   border-radius: 0 0 10px 10px;
   position: absolute;
   width: 100%;
   z-index: 10;
 }
 
-
 .wallet-table-container {
   padding-top: 20vh;
+}
+
+@media screen and ( min-width : 1024px ) {
+
+  .wallet-table-container {
+    padding-top: 17vh;
+  }
 }
 

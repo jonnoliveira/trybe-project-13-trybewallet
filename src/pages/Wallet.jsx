@@ -17,9 +17,6 @@ class Wallet extends React.Component {
   render() {
     return (
       <section className="wallet-container">
-        <div className="wallet-container-img">
-          <img className="wallet-img" src="https://images.ui8.net/uploads/screen2_1620498758245.jpg" alt="" />
-        </div>
         <div className="wallet-header-form-container">
           <Header />
           <WalletForm />

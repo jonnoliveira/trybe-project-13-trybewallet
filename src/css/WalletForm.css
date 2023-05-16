@@ -1,5 +1,5 @@
 .walletform-container {
-  align-items: left;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -13,7 +13,6 @@
   width: 100%;
 }
 
-
 .walletform-container button {
   align-self: center;
   font-weight: 600;
@@ -21,4 +20,23 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 90%;
+}
+
+@media screen and ( min-width : 768px ) {
+
+  .walletform-inputs-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .walletform-container input , .walletform-container select {
+    height: 5vh;
+    padding-left: 2vw;
+    width: 100%;
+  }
+
+  .walletform-container button {
+    width: 50%;
+  }
 }
