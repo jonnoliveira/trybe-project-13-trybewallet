@@ -25,18 +25,36 @@
 @media screen and ( min-width : 768px ) {
 
   .walletform-inputs-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .walletform-container label {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    font-size: 0.7em;
+    justify-content: center;
+    width: 150px;
   }
 
   .walletform-container input , .walletform-container select {
     height: 5vh;
-    padding-left: 2vw;
-    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    width: 90%;
   }
 
   .walletform-container button {
     width: 50%;
+  }
+}
+
+@media screen and ( min-width : 1024px ) {
+
+  .walletform-container label {
+    font-size: 1em;
+    width: 200px;
   }
 }

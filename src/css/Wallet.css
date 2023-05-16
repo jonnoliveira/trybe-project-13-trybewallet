@@ -14,13 +14,13 @@
 }
 
 .wallet-table-container {
-  padding-top: 20vh;
+  padding-top: 27vh;
 }
 
 @media screen and ( min-width : 1024px ) {
 
   .wallet-table-container {
-    padding-top: 17vh;
+    padding-top: 22vh;
   }
 }
 

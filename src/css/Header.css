@@ -5,6 +5,22 @@
   padding: 2vh;
 }
 
+.header-container-title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container-title p {
+  font-size: 1.5em;
+}
+
+.header-container-title h1 {
+  color: #2fc18c;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
 .header-container h2 {
   font-size: 1.2em;
   font-weight: 400;

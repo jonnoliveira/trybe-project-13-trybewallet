@@ -16,9 +16,11 @@ class Header extends Component {
 
     return (
       <header className="header-container">
-
+        <div className="header-container-title">
+          <p>Trybe</p>
+          <h1>wallet</h1>
+        </div>
         <h2>Bem vindo(a) de volta!</h2>
-
         <div className="header-info-container">
           <div className="header-info-icons">
             <img src={ account } alt="account icon" />
