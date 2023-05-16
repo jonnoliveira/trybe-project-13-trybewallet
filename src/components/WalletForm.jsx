@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { toExpenses, fetchCurrencyAPIToExpenses } from '../redux/actions/requestAPI';
 import { saveEditedExpense } from '../redux/actions';
 
+import '../css/WalletForm.css';
+
 const ALIMENTAÇÃO = 'Alimentação';
 const METHODS = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
 const TAGS = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
@@ -74,7 +76,7 @@ class WalletForm extends Component {
     const { value, currency, method, tag, description } = this.state;
 
     return (
-      <section>
+      <div className="walletform-container">
         <label htmlFor="value">
           Valor:
           {' '}
@@ -157,7 +159,6 @@ class WalletForm extends Component {
             data-testid="description-input"
             onChange={ this.onChangeHandler }
             value={ description }
-
           />
         </label>
         <button
@@ -168,7 +169,7 @@ class WalletForm extends Component {
         >
           {editor ? 'Editar despesa' : 'Adicionar despesa'}
         </button>
-      </section>
+      </div>
     );
   }
 }

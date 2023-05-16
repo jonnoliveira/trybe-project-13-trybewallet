@@ -1,0 +1,28 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 2vh;
+}
+
+.header-container h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.header-info-container {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  gap: 1vh;
+}
+
+.header-info-icons {
+  align-items: center;
+  display: flex;
+  gap: 2vw;
+}
+
+.header-info-icons img {
+  width: 25px;
+}

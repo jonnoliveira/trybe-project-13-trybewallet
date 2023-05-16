@@ -1,0 +1,25 @@
+.walletform-container {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.walletform-container input , .walletform-container select {
+  height: 5vh;
+  padding: 2vw;
+  width: 100%;
+}
+
+
+.walletform-container button {
+  align-self: center;
+  font-weight: 600;
+  height: 5vh;
+  letter-spacing: 1px;
+  padding: 2vw;
+  text-transform: uppercase;
+  width: 90%;
+}

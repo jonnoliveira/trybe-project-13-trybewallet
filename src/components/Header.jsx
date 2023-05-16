@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import account from '../images/account.svg';
+import money from '../images/money.svg';
+
+import '../css/Header.css';
 
 class Header extends Component {
   render() {
@@ -11,24 +15,24 @@ class Header extends Component {
       sum + expense.value * expense.exchangeRates[expense.currency].ask), 0).toFixed(2);
 
     return (
-      <header>
-        <figure>
-          <img src="https://cdn.pixabay.com/photo/2018/10/03/11/31/wallet-3721156_1280.png" alt="Uma carteira em desnho com dinheiro saindo" width="100px" />
-          <h1>Bem vindo(a) de volta!</h1>
-        </figure>
-        <div>
-          <div>
+      <header className="header-container">
+
+        <h2>Bem vindo(a) de volta!</h2>
+
+        <div className="header-info-container">
+          <div className="header-info-icons">
+            <img src={ account } alt="account icon" />
             <p data-testid="email-field">
               {email}
             </p>
           </div>
-          <div>
+          <div className="header-info-icons">
+            <img src={ money } alt="Money icon" />
             <p data-testid="total-field">
+              Total em despesas:
+              {' '}
               { price }
-            </p>
-          </div>
-          <div>
-            <p data-testid="header-currency-field">
+              {' '}
               BRL
             </p>
           </div>
