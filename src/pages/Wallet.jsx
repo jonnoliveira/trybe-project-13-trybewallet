@@ -6,6 +6,8 @@ import WalletForm from '../components/WalletForm';
 import { fetchCurrencyAPI } from '../redux/actions/requestAPI';
 import Table from '../components/Table';
 
+import '../css/Wallet.css';
+
 class Wallet extends React.Component {
   componentDidMount() {
     const { dispatch } = this.props;
@@ -14,10 +16,17 @@ class Wallet extends React.Component {
 
   render() {
     return (
-      <section>
-        <Header />
-        <WalletForm />
-        <Table />
+      <section className="wallet-container">
+        <div className="wallet-container-img">
+          <img className="wallet-img" src="https://images.ui8.net/uploads/screen2_1620498758245.jpg" alt="" />
+        </div>
+        <div className="wallet-header-form-container">
+          <Header />
+          <WalletForm />
+        </div>
+        <div className="wallet-table-container">
+          <Table />
+        </div>
       </section>
     );
   }

@@ -4,25 +4,27 @@ import { connect } from 'react-redux';
 import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
 
+import '../css/Table.css';
+
 const REAL = 'Real';
 
 class Table extends React.Component {
   render() {
     const { expenses } = this.props;
     return (
-      <section>
+      <div className="table-container">
         <table>
           <thead>
             <tr>
-              <th>Descrição</th>
-              <th>Tag</th>
-              <th>Método de pagamento</th>
-              <th>Valor</th>
-              <th>Moeda</th>
-              <th>Câmbio utilizado</th>
-              <th>Valor convertido</th>
-              <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+              <th className="table-title">Descrição</th>
+              <th className="table-title">Tag</th>
+              <th className="table-title">Método de pagamento</th>
+              <th className="table-title">Valor</th>
+              <th className="table-title">Moeda</th>
+              <th className="table-title">Câmbio utilizado</th>
+              <th className="table-title">Valor convertido</th>
+              <th className="table-title">Moeda de conversão</th>
+              <th className="table-title">Editar/Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -54,7 +56,7 @@ class Table extends React.Component {
             }
           </tbody>
         </table>
-      </section>
+      </div>
     );
   }
 }

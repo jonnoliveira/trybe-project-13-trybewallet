@@ -8,6 +8,7 @@
 .header-container h2 {
   font-size: 1.2em;
   font-weight: 400;
+  position: relative;
 }
 
 .header-info-container {

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeExpense } from '../redux/actions/index';
+import trash from '../images/trash.svg';
+
+import '../css/DeleteButton.css';
 
 class DeleteButton extends Component {
   handleDeleteExpense = () => {
@@ -19,9 +22,9 @@ class DeleteButton extends Component {
         type="button"
         data-testid="delete-btn"
         onClick={ this.handleDeleteExpense }
+        className="delete-button"
       >
-        Excluir
-
+        <img src={ trash } alt="Trash icon" />
       </button>
     );
   }

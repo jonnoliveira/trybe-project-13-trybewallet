@@ -9,7 +9,7 @@
 
 .walletform-container input , .walletform-container select {
   height: 5vh;
-  padding: 2vw;
+  padding-left: 2vw;
   width: 100%;
 }
 
@@ -19,7 +19,6 @@
   font-weight: 600;
   height: 5vh;
   letter-spacing: 1px;
-  padding: 2vw;
   text-transform: uppercase;
   width: 90%;
 }
